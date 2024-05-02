@@ -3,13 +3,13 @@
   "assignees": [ "volker.raschek" ],
   "customManagers": [
     {
+      "customType": "regex",
       "description": "Update PKGBUILD version",
-      "fileMatch": [
-        "^PKGBUILD$"
-      ],
+      "fileMatch": [ "(^|/)PKGBUILD$" ],
       "matchStrings": [
         "pkgver=(?<currentValue>.*) # renovate: datasource=(?<datasource>.*) depName=(?<depName>.*)( lookupName=(?<lookupName>.*))?( versioning=(?<versioning>.*))?"
-      ]
+      ],
+      "extractVersionTemplate": "^v?(?<version>.*)$"
     }
   ],
   "labels": [ "renovate" ],
