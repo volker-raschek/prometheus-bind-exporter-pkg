@@ -2,7 +2,7 @@
 
 pkgname=prometheus-bind-exporter
 _pkgname=bind_exporter
-pkgver=0.6.1 # renovate: datasource=github-releases depName=prometheus-community/bind_exporter
+pkgver=v0.7.0 # renovate: datasource=github-releases depName=prometheus-community/bind_exporter
 pkgrel=1
 pkgdesc='Prometheus exporter for BIND metrics'
 arch=('x86_64')
