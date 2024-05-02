@@ -1,6 +1,17 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "assignees": [ "volker.raschek" ],
+  "customManagers": [
+    {
+      "description": "Update PKGBUILD version",
+      "fileMatch": [
+        "^PKGBUILD$"
+      ],
+      "matchStrings": [
+        "pkgver=(?<currentValue>.*) # renovate: datasource=(?<datasource>.*) depName=(?<depName>.*)( lookupName=(?<lookupName>.*))?( versioning=(?<versioning>.*))?"
+      ]
+    }
+  ],
   "labels": [ "renovate" ],
   "packageRules": [
     {
