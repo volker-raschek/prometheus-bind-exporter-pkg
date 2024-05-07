@@ -1,17 +1,6 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "assignees": [ "volker.raschek" ],
-  "customManagers": [
-    {
-      "customType": "regex",
-      "description": "Update PKGBUILD version",
-      "fileMatch": [ "(^|/)PKGBUILD$" ],
-      "matchStrings": [
-        "pkgver=(?<currentValue>.*) # renovate: datasource=(?<datasource>.*) depName=(?<depName>.*)( lookupName=(?<lookupName>.*))?( versioning=(?<versioning>.*))?"
-      ],
-      "extractVersionTemplate": "^v?(?<version>.*)$"
-    }
-  ],
   "labels": [ "renovate" ],
   "packageRules": [
     {
@@ -22,5 +11,15 @@
     }
   ],
   "rebaseLabel": "renovate/rebase",
-  "rebaseWhen": "behind-base-branch"
+  "rebaseWhen": "behind-base-branch",
+  "regexManagers": [
+    {
+      "description": "Update PKGBUILD version",
+      "fileMatch": [ "(^|/)PKGBUILD$" ],
+      "matchStrings": [
+        "pkgver=(?<currentValue>.*) # renovate: datasource=(?<datasource>.*) depName=(?<depName>.*)( lookupName=(?<lookupName>.*))?( versioning=(?<versioning>.*))?"
+      ],
+      "extractVersionTemplate": "^v?(?<version>.*)$"
+    }
+  ]
 }
