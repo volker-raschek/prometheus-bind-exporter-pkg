@@ -1,7 +1,6 @@
 # prometheus-bind-exporter
 
 ![AUR version](https://img.shields.io/aur/version/prometheus-bind-exporter?label=AUR)
-[![Build Status](https://drone.cryptic.systems/api/badges/volker.raschek/prometheus-bind-exporter-pkg/status.svg)](https://drone.cryptic.systems/volker.raschek/prometheus-bind-exporter-pkg)
 ![AUR votes](https://img.shields.io/aur/votes/prometheus-bind-exporter)
 
 This repository contains build files to build the Arch Linux package `prometheus-bind-exporter`. Instead of building the
